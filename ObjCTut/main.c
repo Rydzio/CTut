@@ -5,6 +5,16 @@
 
 int main(int argc, const char * argv[]) {
     
+    /*
+     short %d
+     int %d
+     long %ld
+     float %f
+     double %lf
+     char %c
+    */
+    
+    
 //    --- 1. For loop ---
     /*
     //    *argv = "I am happy";
@@ -83,6 +93,7 @@ int main(int argc, const char * argv[]) {
     
     
 //    --- 8. Basic math, casting, shorthand notation ---
+    /*
     printf("3 + 2 = %d\n", 3 + 2);
     printf("3 - 2 = %d\n", 3 - 2);
     printf("3 * 2 = %d\n", 3 * 2);
@@ -112,16 +123,39 @@ int main(int argc, const char * argv[]) {
     printf("exp2 of j = %.2f\n", exp2(j));
     printf("log of j = %.2f\n", log(j));
     printf("pow^3 of j = %.2f\n", pow(j, 3));
+    */
     
+    
+//    --- 9. More looping ---
+    for (int i = 1; i <= 10; i++) {
+        if (i == 9) {
+            break;
+        }
+        
+        if (i == 7) {
+            continue;
+        }
+        
+        if (i % 2) {
+            printf("i : %d\n", i);
+        }
+    }
+    
+    int j = 1;
+    
+    while (j <= 10) {
+        printf("j : %d\n", j);
+        j++;
+    }
+    
+    int guess;
+    
+    do {
+        printf("Guess a number between 0 and 20 : ");
+        scanf("%d", &guess);
+    } while (guess != 15);
     
     return 0;
 }
 
-/*
- short %d
- int %d
- long %ld
- float %f
- double %lf
- char %c
-*/
+
