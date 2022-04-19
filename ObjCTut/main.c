@@ -2,12 +2,9 @@
 
 int main(int argc, const char * argv[]) {
 
-    float fTemp;
-    printf("Enter Temp in F: ");
-    scanf("%f", &fTemp);
+    int bigInt = 2147483647;
     
-    float cTemp = (fTemp - 32) / 1.8;
-    printf("%.1f degrees Celcius\n", cTemp);
+    printf("Big Int: %d\n", bigInt + 1);
     
     return 0;
 }
