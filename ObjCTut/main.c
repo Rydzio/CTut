@@ -3,6 +3,21 @@
 #include <float.h>
 #include <stdbool.h>
 
+float globalPiVal = 3.1415;
+static float localPiVal = 3.14;
+
+
+void convertData(char *name, float height, float weight) {
+    name = "Phil";
+    float piHeight = height * globalPiVal;
+    float piWeight = weight * localPiVal;
+    printf("%s is %.2f pimeters tall and weights %.2f pilograms\n", name, piHeight, piWeight);
+}
+
+float sum(float num1, float num2) {
+    return num1 + num2;
+}
+
 int main(int argc, const char * argv[]) {
     
     /*
@@ -127,6 +142,7 @@ int main(int argc, const char * argv[]) {
     
     
 //    --- 9. More looping ---
+    /*
     for (int i = 1; i <= 10; i++) {
         if (i == 9) {
             break;
@@ -154,6 +170,21 @@ int main(int argc, const char * argv[]) {
         printf("Guess a number between 0 and 20 : ");
         scanf("%d", &guess);
     } while (guess != 15);
+     */
+    
+    
+//    --- 10. Functions ---
+    
+    convertData("Michal", 185, 75);
+    
+    char *name = "Derek";
+    printf("Name in Main is %s\n", name);
+    
+    printf("5 + 6 = %.1f\n", sum(5, 6));
+    
+    
+    
+//    --- END ---
     
     return 0;
 }
