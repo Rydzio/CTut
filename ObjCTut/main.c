@@ -18,6 +18,10 @@ float sum(float num1, float num2) {
     return num1 + num2;
 }
 
+void changeNumber(int *number) {
+    *number = 98765;
+}
+
 int main(int argc, const char * argv[]) {
     
     /*
@@ -27,6 +31,7 @@ int main(int argc, const char * argv[]) {
      float %f
      double %lf
      char %c
+     pointer %p
     */
     
     
@@ -174,14 +179,41 @@ int main(int argc, const char * argv[]) {
     
     
 //    --- 10. Functions ---
-    
+    /*
     convertData("Michal", 185, 75);
     
     char *name = "Derek";
     printf("Name in Main is %s\n", name);
     
     printf("5 + 6 = %.1f\n", sum(5, 6));
+    */
     
+    
+//    --- 11. Pointers ---
+    
+    // & is the address
+    int randNum = 12345;
+    printf("randNum location: %p\n", &randNum);
+    
+    // * is the pointer
+    int *addrRandNum = &randNum;
+    printf("randNum location: %p\n", addrRandNum);
+    
+    // we can also change variable using address
+    *addrRandNum = 54321;
+    printf("randNum value: %d\n", randNum);
+    
+    // to show the addres we use %p
+    printf("randNum Memory Location: %p\n", &randNum);
+    
+    // to show size we use %zu
+    printf("randNum is %zu bytes\n", sizeof(randNum));
+    
+    // to change a variable inside the function we use the addres of the variable
+    int number = 12345;
+    printf("Number value %d\n", number);
+    changeNumber(&number);
+    printf("Changed number value %d\n", number);
     
     
 //    --- END ---
