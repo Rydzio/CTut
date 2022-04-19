@@ -22,6 +22,13 @@ void changeNumber(int *number) {
     *number = 98765;
 }
 
+struct Superhero {
+    char *realName;
+    char *superName;
+    float height;
+    float weight;
+};
+
 int main(int argc, const char * argv[]) {
     
     /*
@@ -190,7 +197,7 @@ int main(int argc, const char * argv[]) {
     
     
 //    --- 11. Pointers ---
-    
+    /*
     // & is the address
     int randNum = 12345;
     printf("randNum location: %p\n", &randNum);
@@ -214,6 +221,18 @@ int main(int argc, const char * argv[]) {
     printf("Number value %d\n", number);
     changeNumber(&number);
     printf("Changed number value %d\n", number);
+    */
+    
+    
+//    --- 12. Structs ---
+    
+    struct Superhero superman;
+    superman.realName = "Clark Kent";
+    superman.superName = "Superman";
+    superman.height = 201;
+    superman.weight = 96;
+    
+    printf("%s is the hero named %s. He is %.2f cm high and weights %.2f kg\n", superman.realName, superman.superName, superman.height, superman.weight);
     
     
 //    --- END ---
