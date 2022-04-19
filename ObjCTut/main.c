@@ -1,9 +1,13 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-//    *argv = "I am happy";
-    for (int i = 0; i < argc; i++) {
-        printf("arg %d : %s\n", i, argv[i]);
-    }
+
+    float fTemp;
+    printf("Enter Temp in F: ");
+    scanf("%f", &fTemp);
+    
+    float cTemp = (fTemp - 32) / 1.8;
+    printf("%.1f degrees Celcius\n", cTemp);
+    
     return 0;
 }
