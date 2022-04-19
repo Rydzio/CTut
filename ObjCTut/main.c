@@ -4,8 +4,11 @@
 
 int main(int argc, const char * argv[]) {
     
-    printf("Min Float : %e\n", FLT_MIN);
-    printf("Max Float : %e\n", FLT_MAX);
+    float pi = 3.1415926;
+    
+    printf("3.1415926 + .0000001 = %.7f\n", pi + .0000001);
+    
+    printf("Precise Decimal Digits : %d\n", FLT_DIG);
     
     return 0;
 }
