@@ -2,9 +2,9 @@
 
 int main(int argc, const char * argv[]) {
 
-    int bigInt = 2147483647;
+    long bigLong = 9223372036854775807;
     
-    printf("Big Int: %d\n", bigInt + 1);
+    printf("Big Long: %ld\n", bigLong + 1);
     
     return 0;
 }
